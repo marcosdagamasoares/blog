@@ -30,7 +30,7 @@ SECRET_KEY = 'wzzwe=^ly4)77ez2ecv8mkv*@nd!=*ctvthp@-$abmp^kragg0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['blog-familia.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'blog.urls'
 
@@ -160,4 +162,8 @@ MESSAGE_TAGS = {
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SESSION_COOKIE_SECURE = False
+SRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 

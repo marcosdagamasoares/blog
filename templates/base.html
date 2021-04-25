@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
     <title>{% block titulo %}{% endblock %}Blog de Marcos e Simone</title>
     {% include 'parciais/_head.html' %}
 </head>
+
 <body>
-    {% include 'parciais/_nav.html' %}
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                {% block conteudo %}{% endblock %}
-            </div>
+
+{% include 'parciais/_nav.html' %}
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            {% block conteudo %}{% endblock %}
         </div>
     </div>
-    {% include 'parciais/_footer.html' %}
+</div>
+
+{% include 'parciais/_footer.html' %}
 </body>
+
 </html>

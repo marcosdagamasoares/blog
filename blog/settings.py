@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'wzzwe=^ly4)77ez2ecv8mkv*@nd!=*ctvthp@-$abmp^kragg0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['blog-familia.herokuapp.com', '127.0.0.1']
 
@@ -63,6 +63,7 @@ MIDDLEWARE = [
 ]
 
 SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ROOT_URLCONF = 'blog.urls'
 

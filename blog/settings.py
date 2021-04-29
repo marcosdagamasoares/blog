@@ -14,6 +14,7 @@ from pathlib import Path
 import dj_database_url
 import os
 import whitenoise
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #from django.conf.global_settings import MEDIA_URL
@@ -167,10 +168,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_COOKIE_SECURE = False
 SRF_COOKIE_SECURE = False
 SECURE_SSL_REDIRECT = False
-
-AWS_ACCESS_KEY_ID = 'AKIAZL7GUWVNBGXG2UGQ'
-AWS_SECRET_ACCESS_KEY = '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'
-
 AWS_STORAGE_BUCKET_NAME = 'blog-fotos'
 
 AWS_S3_FILE_OVERWRITE = False

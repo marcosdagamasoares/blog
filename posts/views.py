@@ -50,13 +50,13 @@ class PostBusca(PostIndex):
 
 
 class PostCategoria(PostIndex):
-    template_name = 'posts/post_categoria.html'
+    template_name = 'posts/post_categoria.ht'
 
     def get_queryset(self):
         qs = super().get_queryset()
 
         # TESTE
-        print(self.kwargs)
+        # print(self.kwargs)
         categoria = self.kwargs.get('categoria', None)
 
         if not categoria:

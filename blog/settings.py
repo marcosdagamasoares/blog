@@ -14,7 +14,7 @@ from pathlib import Path
 import dj_database_url
 import os
 import whitenoise
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #from django.conf.global_settings import MEDIA_URL
@@ -32,6 +32,7 @@ SECRET_KEY = 'wzzwe=^ly4)77ez2ecv8mkv*@nd!=*ctvthp@-$abmp^kragg0'
 DEBUG = False
 
 ALLOWED_HOSTS = ['blog-familia.herokuapp.com', '127.0.0.1']
+
 
 
 # Application definition
@@ -164,12 +165,12 @@ MESSAGE_TAGS = {
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SESSION_COOKIE_SECURE = False
-SRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
+SRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = False
-AWS_STORAGE_BUCKET_NAME = 'blog-fotos'
 
+# O nome do seu intervalo de armazenamento do Amazon Web Services, como uma string.
+AWS_STORAGE_BUCKET_NAME = 'blog-fotos'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

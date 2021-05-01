@@ -50,7 +50,7 @@ class PostBusca(PostIndex):
 
 
 class PostCategoria(PostIndex):
-    template_name = 'posts/post_categoria.ht'
+    template_name = 'posts/post_categoria.html'
 
     def get_queryset(self):
         qs = super().get_queryset()

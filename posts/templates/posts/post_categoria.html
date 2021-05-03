@@ -2,9 +2,7 @@
 {% load humanize %}
 {% block titulo %}Categoria - {% endblock %}
 
-
 {% block conteudo %}
-<h2>post_categoria</h2>
 <!-- CONTENT -->
 <div class="card-columns mt-4">
     <!-- FOR LOOP -->
@@ -16,6 +14,8 @@
                  src="{{ post.imagem_post.url }}"
                  alt="{{ post.titulo_post }}">
         </a>
+        {% else %}
+        <h2>Sem Postagens!</h2>
         {% endif %}
 
         <div class="card-body" >
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endfor %} 
     <!--/FOR LOOP-->
 </div>
 <!--/CONTENT-->

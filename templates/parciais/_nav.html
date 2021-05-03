@@ -14,18 +14,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'post_categoria' 'familia' %}">Familia</a>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="{% url 'post_categoria' 'python' %}">Python</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="{% url 'post_categoria' 'django' %}">Django</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="{% url 'post_categoria' 'tecnologia' %}">Tecnologia</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="{% url 'post_categoria' 'sistemas' %}">Sistemas</a>-->
-<!--                </li>-->
+
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-lg-4" action="{% url 'post_busca' %}">
                 <input name="termo" value="{{ request.GET.termo }}" class="form-control mr-sm-2" type="search" placeholder="Pesquisar"

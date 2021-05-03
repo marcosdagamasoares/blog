@@ -13,9 +13,7 @@
             <img class="card-img-top"
                  src="{{ post.imagem_post.url }}"
                  alt="{{ post.titulo_post }}">
-        </a>
-        {% else %}
-        <h2>Sem Postagens!</h2>
+        </a>        
         {% endif %}
 
         <div class="card-body" >
@@ -38,7 +36,9 @@
                 <a href="{% url 'post_detalhes' post.id %}" class="btn btn-outline-secondary">Ler mais...</a>
             </div>
         </div>
-    </div>
+    </div>   
+    {% empty %} 
+    <h2 class="text-primary">Sem postagens!</h2>
     {% endfor %} 
     <!--/FOR LOOP-->
 </div>
